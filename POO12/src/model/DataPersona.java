@@ -15,22 +15,52 @@ se recibe como parámetro, o false en caso contrario.
  Metodo mostrarPersona(): este método muestra la persona creada en el método
 anterior.
  */
-package poo12;
+package model;
 
-import model.DataPersona;
-import service.ServicePersona;
+import java.util.Date;
 
-class POO12 {
+/**
+ *
+ * @author nahue
+ */
+public class DataPersona {
+    
+   private String nombre;
+   private Date fecha;
+   
+   
+   public DataPersona(){
+   }
+   
+   public DataPersona(Date fecha,String nombre){
+   this.fecha = fecha;
+   this.nombre = nombre;
+  }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        ServicePersona sp = new ServicePersona();
-        DataPersona p1 = sp.crearPersona();
-        
-        
-        System.out.println(p1.toString());
+    public String getNombre() {
+        return nombre;
     }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    @Override
+    public String toString() {
+        return "DataPersona{" + "nombre=" + nombre + ", fecha=" + fecha + '}';
+    }
+    
+    
+   
+   
+   
     
 }
