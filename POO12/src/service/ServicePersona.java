@@ -24,18 +24,17 @@ import model.DataPersona;
  * @author nahue
  */
 public class ServicePersona {
-    
-    
-    public DataPersona crearPersona()  {
-      Scanner leer = new Scanner (System.in);
-      DataPersona dp = new DataPersona(); 
-      
-      String nombreP;
+
+    public DataPersona crearPersona() {
+        Scanner leer = new Scanner(System.in);
+        DataPersona dp = new DataPersona();
+
+        String nombreP;
         System.out.println("ingrese su nombre");
-        nombreP =leer.next();
-       int dia,mes,anio;
-      
-   do {
+        nombreP = leer.next();
+        int dia, mes, anio;
+
+        do {
             System.out.println("Registre el día: ");
             dia = leer.nextInt();
         } while (dia < 0 && dia >= 31);
@@ -49,29 +48,42 @@ public class ServicePersona {
         } while (anio < 0 && anio >= 3000);
 
         Date aux = new Date(anio - 1900, mes - 1, dia);
-         
-         dp.setFecha(aux);
-         dp.setNombre(nombreP);
-         
-         return dp;
+
+        dp.setFecha(aux);
+        dp.setNombre(nombreP);
+
+        return dp;
+
+    }
+
+    public int calcularEdad(DataPersona dp) {
+
+        Date fechaHoy = new Date();
+
+        int edad = ((fechaHoy.getYear() - dp.getFecha().getYear()) - (fechaHoy.getMonth() - dp.getFecha().getMonth()) - (fechaHoy.getDay() - dp.getFecha().getDay() + 1));
+
+        return edad;
+
+    }
+
+    public boolean MayorDeEdad(int edad) {
+
+        boolean aux;
+
+        if (edad >= 18) {
+
+            aux = true;
+        } else {
+            aux = false;
+        }
+
+        return aux;
+    }
+    
+    public void mostrarPersona(DataPersona dp){
+ 
+        System.out.println(dp.toString());
         
     }
-    
-    public void MayorDeEdad(DataPersona dp){
-    Date fechaHoy = new Date();
-    boolean aux;
-    int antiguedad = fechaHoy.getDay() - dp.getFecha().getYear();
-    
-    if( antiguedad >= 18){
-    
-        aux = true;
-    }
-    else{
-     aux = false;
-    }
-    
-    
-        System.out.println(aux);
-    }
-    
+
 }

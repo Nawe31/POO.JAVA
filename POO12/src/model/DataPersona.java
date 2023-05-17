@@ -24,18 +24,17 @@ import java.util.Date;
  * @author nahue
  */
 public class DataPersona {
-    
-   private String nombre;
-   private Date fecha;
-   
-   
-   public DataPersona(){
-   }
-   
-   public DataPersona(Date fecha,String nombre){
-   this.fecha = fecha;
-   this.nombre = nombre;
-  }
+
+    private String nombre;
+    private Date fecha;
+
+    public DataPersona() {
+    }
+
+    public DataPersona(Date fecha, String nombre) {
+        this.fecha = fecha;
+        this.nombre = nombre;
+    }
 
     public String getNombre() {
         return nombre;
@@ -57,10 +56,5 @@ public class DataPersona {
     public String toString() {
         return "DataPersona{" + "nombre=" + nombre + ", fecha=" + fecha + '}';
     }
-    
-    
-   
-   
-   
-    
+
 }

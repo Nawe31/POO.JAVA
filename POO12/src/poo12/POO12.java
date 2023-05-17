@@ -31,6 +31,18 @@ class POO12 {
         
         
         System.out.println(p1.toString());
+        
+        System.out.println(" ");
+        
+        System.out.println( sp.calcularEdad(p1));
+        
+        System.out.println("");
+        
+        System.out.println(sp.MayorDeEdad(sp.calcularEdad(p1)));
+        
+        System.out.println(" ");
+        
+        sp.mostrarPersona(p1);
     }
     
 }
