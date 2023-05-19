@@ -19,10 +19,7 @@ import java.util.Date;
 import java.util.Scanner;
 import model.DataPersona;
 
-/**
- *
- * @author nahue
- */
+
 public class ServicePersona {
 
     public DataPersona crearPersona() {
