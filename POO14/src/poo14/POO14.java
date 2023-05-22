@@ -33,7 +33,7 @@ public class POO14 {
         
         
         System.out.println(m1.toString());
-        
+        System.out.println(m1.getCodigo().toString());
     }
     
 }
