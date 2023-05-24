@@ -26,38 +26,33 @@ public class Cancion {
 
     }
 
-    
-    public String getTitulo(){
+    public String getTitulo() {
 
         return titulo;
-}
-    
-    public String getAutor(){
-       return autor;
-       
-    }
-    
-    public String setTitulo(String titulo){
-    
-    this.titulo=titulo;
-    
-    return titulo;
     }
 
-   
-    
-    public String setAutor(String autor){
-    
-        this.autor=autor;
-        
+    public String getAutor() {
+        return autor;
+
+    }
+
+    public String setTitulo(String titulo) {
+
+        this.titulo = titulo;
+
+        return titulo;
+    }
+
+    public String setAutor(String autor) {
+
+        this.autor = autor;
+
         return autor;
     }
-    
-    
-       @Override
+
+    @Override
     public String toString() {
         return "Cancion{" + "titulo=" + titulo + ", autor=" + autor + '}';
     }
-    
-    
+
 }
