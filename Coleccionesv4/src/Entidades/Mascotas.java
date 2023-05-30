@@ -52,5 +52,4 @@ public class Mascotas {
     public String toString() {
         return "Mascotas{" + "nombre=" + nombre + ", apodo=" + apodo + ", tipo=" + tipo + '}';
     }
-
 }

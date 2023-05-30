@@ -65,48 +65,42 @@ public class ServiceMascota {
         for (int i = 0; i < cantidad; i++) {
 
             Mascotas mascotaCreadas = crearMascotas();
-            
+
             agregarMascotas(mascotaCreadas);
 
             System.out.println(mascotaCreadas.toString());
         }
 
     }
-    
-    
+
     // actualizar objetos //
-    
-   /* public void actualizarMascota (int index){
+    /* public void actualizarMascota (int index){
         
         Mascotas m = Mascotas.get(index);
         m.setApodo("pato");
        
     }*/
-    
-    
-    public void actualizarMascota2 ( int index){
-    
-        if( index <= Mascotas.size()-1){
-        Mascotas m = crearMascotas();
-        Mascotas.set(index, m);
-        
-        }
-        else{
+    public void actualizarMascota2(int index) {
+
+        if (index <= Mascotas.size() - 1) {
+            Mascotas m = crearMascotas();
+            Mascotas.set(index, m);
+
+        } else {
             System.out.println(" fallo al actualizar");
-            
+
         }
-    
+
     }
-    
-    public void eliminarMascota ( int index){
-     if( index >= Mascotas.size()-1){
-             Mascotas.remove(index);}
-     else{
-     
-         System.out.println(" fallo al eliminar");
-     }
+
+    // eliminar objetos //
+    public void eliminarMascota(int index) {
+        if (index >= Mascotas.size() - 1) {
+            Mascotas.remove(index);
+        } else {
+
+            System.out.println(" fallo al eliminar");
+        }
     }
-    
-    
-    
+
 }
