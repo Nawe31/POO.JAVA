@@ -25,21 +25,25 @@ public class Coleccionesv4 {
         nombre.add("jose");
 
         //recorriendo arrays
-        /*   
-     for (int i = 0; i < nombre.size(); i++) {
-            
-            System.out.println( nombre.get(i));
-            
+        for (int i = 0; i < nombre.size(); i++) {
+
+            System.out.println(nombre.get(i));
+
         }
-         /*
+
+        // de esta manera se rompe, no es recomendable
+        /*
+     
         for (String aux : nombre) {
 
-            System.out.println(aux);
+            if (aux.equals("lola")) {
+                nombre.remove(aux);
+            }
+            
+            System.out.println( aux);
         }
-        */
-        
-       nombre.forEach((e)->System.out.println(e));
-
+         */
+        // nombre.forEach((e)->System.out.println(e));
     }
 
 }

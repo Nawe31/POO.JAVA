@@ -103,4 +103,36 @@ public class ServiceMascota {
         }
     }
 
+    public void eliminarNombre(String nombre) {
+
+        for (int i = 0; i < Mascotas.size(); i++) {
+
+            Mascotas m = Mascotas.get(i);
+
+            if (m.getNombre().equals(nombre)) {
+
+                Mascotas.remove(m);
+            }
+
+        }
+
+    }
+    
+    
+    
+    public void actualizarNombre(String nombre, String nuevo) {
+
+        for (int i = 0; i < Mascotas.size(); i++) {
+
+            Mascotas m = Mascotas.get(i);
+
+            if (m.getNombre().equals(nombre)) {
+
+               m.setNombre(nuevo);
+            }
+
+        }
+
+    }
+
 }
