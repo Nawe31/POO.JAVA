@@ -24,7 +24,14 @@ public class Coleccionesv3 {
         sm.fabricaMascota(2);
 
         sm.mostrarMascotas();
+        
+        sm.actualizarMascota2(0);
 
+        sm.mostrarMascotas();
+        
+        sm.eliminarMascota(0);
+        
+        sm.mostrarMascotas();
     }
 
 }

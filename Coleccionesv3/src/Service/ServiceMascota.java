@@ -72,4 +72,41 @@ public class ServiceMascota {
         }
 
     }
+    
+    
+    // actualizar objetos //
+    
+   /* public void actualizarMascota (int index){
+        
+        Mascotas m = Mascotas.get(index);
+        m.setApodo("pato");
+       
+    }*/
+    
+    
+    public void actualizarMascota2 ( int index){
+    
+        if( index <= Mascotas.size()-1){
+        Mascotas m = crearMascotas();
+        Mascotas.set(index, m);
+        
+        }
+        else{
+            System.out.println(" fallo al actualizar");
+            
+        }
+    
+    }
+    
+    public void eliminarMascota ( int index){
+     if( index >= Mascotas.size()-1){
+             Mascotas.remove(index);}
+     else{
+     
+         System.out.println(" fallo al eliminar");
+     }
+    }
+    
+    
+    
 }
