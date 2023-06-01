@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
  */
 package guia.pkg2;
 
@@ -9,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -22,17 +21,38 @@ public class Guia2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        ArrayList<String> nombres1 = new ArrayList();
+        ArrayList<Integer> nombres1 = new ArrayList();
 
-        nombres1.add("nahuel");
-        nombres1.add("mica");
-        nombres1.add("julio");
-        nombres1.add("lorena");
-        nombres1.add("beltran");
+        nombres1.add(1);
+        nombres1.add(2);
+        nombres1.add(3);
+        nombres1.add(4);
+        nombres1.add(5);
+        
+       // nombres1.remove(2);
+        //nombres1.remove(0);
+        
+        //remover con iterator
+        Iterator <Integer> it = nombres1.iterator();
+        while(it.hasNext()){
+        if(it.next().equals(2))
+            it.remove();
+        }
+        
+        //recorrer lista con iterator 
+        
+        Iterator iterator = nombres1.iterator();
+        
+        System.out.println(" elementos de la lista");
+        
+        while(iterator.hasNext()){
+        
+            System.out.println(iterator.next() + " ");
+        }
+        
+        System.out.println(" ");
 
-        nombres1.forEach((aux) -> {
-            System.out.println(aux);
-        });
+    
 
         System.out.println("");
         System.out.println(" -------------------------");
@@ -45,6 +65,8 @@ public class Guia2 {
         MiSet.add("julio");
         MiSet.add("lorena");
         MiSet.add("beltran");
+        
+        MiSet.remove("nahuel");
 
         MiSet.forEach((aux2) -> {
             System.out.println(aux2);
@@ -62,9 +84,12 @@ public class Guia2 {
         MiMap.put("valor4", "lorena");
         MiMap.put("valor5", "beltran");
 
+        MiMap.remove("valor3"," julio ");
+                
         imprimir(MiMap.keySet());
         imprimir(MiMap.values());
      
+        
 
     }
 
@@ -76,5 +101,7 @@ public class Guia2 {
         }
 
     }
+    
+    
 
 }
