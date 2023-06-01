@@ -6,6 +6,7 @@
 package coleccionesv4;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -24,8 +25,20 @@ public class Coleccionesv4 {
         nombre.add("pepe");
         nombre.add("jose");
 
+        Iterator<String> it = nombre.iterator();
+
+    
+
+        while (it.hasNext()) {
+
+            if (it.next().equals("jose")) {
+                it.remove();
+            }
+
+        }
+
         //recorriendo arrays
-        for (int i = 0; i < nombre.size(); i++) {
+        /* for (int i = 0; i < nombre.size(); i++) {
 
             System.out.println(nombre.get(i));
 
@@ -43,7 +56,7 @@ public class Coleccionesv4 {
             System.out.println( aux);
         }
          */
-        // nombre.forEach((e)->System.out.println(e));
+        nombre.forEach((e)->System.out.println(e));
     }
 
 }
