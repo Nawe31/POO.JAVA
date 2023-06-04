@@ -28,14 +28,20 @@ public class Coleccionesv4 {
         Iterator<String> it = nombre.iterator();
 
     
-
-        while (it.hasNext()) {
+        
+        
+        
+        
+        
+      
+        // borramos con el iterator
+       /*  while (it.hasNext()) {
 
             if (it.next().equals("jose")) {
                 it.remove();
             }
 
-        }
+         }
 
         //recorriendo arrays
         /* for (int i = 0; i < nombre.size(); i++) {
@@ -56,7 +62,7 @@ public class Coleccionesv4 {
             System.out.println( aux);
         }
          */
-        nombre.forEach((e)->System.out.println(e));
+       // nombre.forEach((e)->System.out.println(e));
     }
 
 }
