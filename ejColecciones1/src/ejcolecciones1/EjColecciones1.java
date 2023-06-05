@@ -22,24 +22,28 @@ public class EjColecciones1 {
 
         Scanner leer = new Scanner(System.in);
 
-        System.out.println("decea agregar una raza de perro ? ");
-        String respuesta = leer.next();
+       
+        boolean respuesta = true;
         ArrayList<String> Mascotas = new ArrayList();
 
         do {
-            System.out.println(" ingrese raza de perro, en casa de no querer ingresar escriba salir");
+            System.out.println(" ingrese raza de perro");
             String raza = leer.next();
             Mascotas.add(raza);
-
-            if (raza.equals("salir")) {
-
-                System.out.println(" la ccantitad y raza de mascotas son");
-                break;
+            
+            System.out.println(" decea salir S/N?");
+            
+            if (leer.next().equalsIgnoreCase("S")) {
+                
+              respuesta=false;
             }
             System.out.println("--------");
-        } while (respuesta.equals("si"));
+        } while (respuesta);
+        
         System.out.println(Mascotas.size());
-        System.out.println(Mascotas);
+        for (String Mascota : Mascotas) {
+            System.out.println(Mascota);
+        }
 
     }
 
