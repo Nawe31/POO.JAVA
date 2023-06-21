@@ -20,7 +20,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="jugador" package="Entidades" visibility="public" xPosition="320.0" yPosition="20.0">
+    <Class name="jugador" package="Entidades" visibility="public" xPosition="481.0" yPosition="-35.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
@@ -56,7 +56,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Relacionesv2" package="relacionesv2" visibility="public" xPosition="620.0" yPosition="20.0">
+    <Class name="Relacionesv2" package="relacionesv2" visibility="public" xPosition="1010.0" yPosition="67.0">
       <Fields/>
       <Constructors/>
       <Methods>
