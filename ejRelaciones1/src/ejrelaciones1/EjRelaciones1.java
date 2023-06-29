@@ -10,6 +10,8 @@ package ejrelaciones1;
 
 import Entidades.Perro;
 import Entidades.Persona;
+import Service.servicePerro;
+import Service.servicePersona;
 
 /**
  *
@@ -21,27 +23,17 @@ public class EjRelaciones1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        servicePerro  sp = new servicePerro();
+        servicePersona ps = new servicePersona();
+        Perro p1 = new Perro();
+        Persona p2 = new Persona();
         
-        Persona[] personas = new Persona[2];
-        personas[0] = new Persona("nahuel", "francia", 28, 123, null);
-        personas[1] = new Persona("pepe", "francia", 28, 123, null);
         
-        Perro[] perros = new Perro[2];
+        sp.crearPerro();
+        ps.crearPersona();
+        ps.calcular(p2, p1);
+     
         
-        perros[0] = new Perro("A", "b", 1, "chico");
-        perros[1] = new Perro("b", "c", 2, "grande");
-        
-        for (int i = 0; i < personas.length; i++) {
-            
-            personas[i].setPerro(perros[i]);
-            
-        }
-        
-      
-        for (Persona persona : personas) {
-            
-            System.out.println(persona.toString());
-        }
     }
     
 }

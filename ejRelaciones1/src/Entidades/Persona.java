@@ -9,24 +9,31 @@ package Entidades;
  * @author nahue
  */
 public class Persona {
-    
+
     private String nombre;
     private String apellido;
     private int edad;
     private int documento;
-    private Perro perro;
+   private String raza;
 
     public Persona() {
     }
 
-    
-    
-    public Persona(String nombre, String apellido, int edad, int documento, Perro perro) {
+    public Persona(String nombre, String apellido, int edad, int documento, String raza) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.documento = documento;
-        this.perro = perro;
+
+        this.raza = raza;
+    }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
     }
 
     public String getNombre() {
@@ -61,18 +68,9 @@ public class Persona {
         this.documento = documento;
     }
 
-    public Perro getPerro() {
-        return perro;
-    }
-
-    public void setPerro(Perro perro) {
-        this.perro = perro;
-    }
-
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", documento=" + documento + ", perro=" + perro + '}';
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", documento=" + documento + '}';
     }
-    
-    
+
 }
