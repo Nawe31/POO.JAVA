@@ -24,7 +24,7 @@ public class serviceVehiculos {
         System.out.println("ingrese su numero de motor");
         veiculos.setNumeroMotor(leer.nextInt());
         System.out.println(" ingrese su chasis");
-        veiculos.setNumeroMotor(leer.nextInt());
+        veiculos.setChsis(leer.next());
         System.out.println(" ingrese su color");
         veiculos.setColor(leer.next());
         System.out.println(" ingrese su tipo");
