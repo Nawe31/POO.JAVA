@@ -11,7 +11,7 @@ package Entidades;
  *
  * @author nahue
  */
-public class Animales {
+public abstract class Animales {
     private String nombre;
     private String alimento;
     private String raza;
