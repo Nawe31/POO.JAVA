@@ -42,7 +42,7 @@ public class Electrodomesticos {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(Integer precio) {
         this.precio = precio;
     }
 

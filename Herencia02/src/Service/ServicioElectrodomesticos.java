@@ -35,7 +35,7 @@ public class ServicioElectrodomesticos {
     }
 
     public String comprobarColor(String color) {
-        if (color == "blanco" || color == "negro" || color == "azul" || color == "gris") {
+        if ("blanco".equals(color) || "negro".equals(color) || "azul".equals(color) || "gris".equals(color)) {
             return color;
         } else {
             return "blanco";
@@ -45,10 +45,11 @@ public class ServicioElectrodomesticos {
     public Electrodomesticos crearElectrodomestico() {
         Electrodomesticos e1 = new Electrodomesticos();
         Scanner leer = new Scanner(System.in);
-
-        e1.setPrecio(leer.nextInt(1000));
+          Scanner read = new Scanner(System.in);
+        System.out.println(" ingrese el precio del electrodomoestico");
+        e1.setPrecio(leer.nextInt());
         System.out.println(" el color de su electrodomestico");
-        e1.setColor(leer.nextLine());
+        e1.setColor(read.nextLine());
         comprobarColor(e1.getColor());
         System.out.println(" ingrese el consumo de su electrodomestico");
         e1.setConsumo(leer.next().charAt(0));
@@ -93,10 +94,21 @@ precio. Esta es la lista de precios:
     
         e1.setPrecio(e1.getPrecio()+100);
     }
+      else if (e1.getPeso() >= 20 && e1.getPeso()<= 49)
         
+      {  e1.setPrecio(e1.getPrecio()+500);
+        }
+     else if (e1.getPeso() >= 50 && e1.getPeso()<= 79)
         
+     { e1.setPrecio(e1.getPrecio()+800);
+        }
+     else 
+         { e1.setPrecio(e1.getPrecio()+1000);
         }
 
+
     }
+
+}
 
 
