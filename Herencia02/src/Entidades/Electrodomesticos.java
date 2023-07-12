@@ -58,6 +58,11 @@ public class Electrodomesticos {
         return Consumo;
     }
 
+    @Override
+    public String toString() {
+        return "Electrodomesticos{" + "precio=" + precio + ", color=" + color + ", Consumo=" + Consumo + ", peso=" + peso + '}';
+    }
+
     public void setConsumo(char Consumo) {
         this.Consumo = Consumo;
     }

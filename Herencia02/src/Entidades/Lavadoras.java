@@ -36,6 +36,11 @@ public class Lavadoras extends Electrodomesticos{
     public void setCarga(Integer carga) {
         this.carga = carga;
     }
+
+    @Override
+    public String toString() {
+        return "Lavadoras{" + "carga=" + carga + '}';
+    }
     
    
 }
